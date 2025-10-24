@@ -1,0 +1,76 @@
+Background
+
+A mid-sized technology firm, TechFin Solutions, provides a SaaS-based financial analytics platform serving multiple enterprise clients. Each client organization has dozens of employees accessing dashboards, APIs, and mobile apps to monitor real-time financial insights.
+
+The company originally managed user accounts through a custom authentication layer built into its application code. Over time, as client demand grew and security regulations tightened, the system began to show significant limitations.
+
+Challenges
+
+Scattered Identity Management
+Each application module—web portal, mobile app, and partner API—handled user authentication separately. This led to inconsistencies, redundant code, and difficulty enforcing password policies or MFA across all access points.
+
+Complex Access Control Requirements
+Clients demanded role-based and attribute-based access, such as:
+
+Finance Analysts should only view data within their department.
+
+Administrators should manage user accounts for their own organization but not others.
+
+Auditors should have read-only access with session expiration policies.
+
+User Federation and SSO Expectations
+Several enterprise customers wanted their employees to log in using their existing corporate identities (e.g., Microsoft Entra ID or Google Workspace). The in-house authentication system lacked SAML and OIDC integration capabilities, forcing users to maintain multiple credentials.
+
+Security Compliance and Monitoring
+To meet financial industry standards like SOC 2 and ISO 27001, the platform required:
+
+Multi-Factor Authentication (MFA)
+
+Centralized session logging and audit trails
+
+Secure token handling for API access
+
+Fine-grained access control for APIs
+
+Scalability and Cost Concerns
+During peak business cycles, login traffic surged dramatically. The authentication layer became a performance bottleneck, occasionally failing under heavy load. Scaling the system required additional infrastructure and security management overhead.
+
+Business Goals
+
+Centralize identity management across all applications.
+
+Implement Single Sign-On (SSO) and Multi-Factor Authentication (MFA).
+
+Enable API-level access tokens for secure integration with client systems.
+
+Provide support for social and enterprise identity providers.
+
+Reduce operational burden of managing custom authentication code and databases.
+
+Expected Capabilities in the Chosen Solution
+
+The team decided to explore an identity and access management service that could:
+
+Easily integrate with existing mobile, web, and backend APIs.
+
+Support OpenID Connect (OIDC) and OAuth 2.0 for token-based access.
+
+Handle user pool creation, authentication flows, and token issuance automatically.
+
+Provide built-in features for user sign-up, password reset, and account recovery.
+
+Offer usage-based pricing and automatic scalability.
+
+Impact
+
+After integration, the company achieved:
+
+A unified authentication workflow across all clients and applications.
+
+Seamless login experiences via enterprise and social identity providers.
+
+Enhanced API security through signed JWT tokens.
+
+Reduced development effort and faster onboarding for new clients.
+
+Compliance with security standards and improved audit visibility.
