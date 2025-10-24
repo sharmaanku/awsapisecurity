@@ -1,0 +1,24 @@
+Background:
+FinTrust Solutions is a financial services company that provides digital banking and investment management services through a web portal and a mobile application. The platform interacts with multiple backend services through APIs that handle sensitive operations such as fetching user portfolios, performing transactions, and updating personal data.
+
+Scenario:
+The company recently identified that their internal APIs, used by the mobile app, were directly exposed over the internet without adequate protection. During a recent audit, it was found that these APIs were not enforcing proper authentication or authorization, leading to potential risks of unauthorized access and data leakage.
+
+Additionally, there were inconsistencies in how user access permissions were managed across services. Some APIs were accessible with generic keys, while others relied on custom tokens that lacked proper expiration and verification mechanisms.
+
+To strengthen their API ecosystem, FinTrust Solutions decides to re-architect their API access layer to ensure secure communication, centralized authentication, and fine-grained access control.
+
+Key Requirements:
+
+Establish a secure gateway for all API traffic with centralized entry and monitoring.
+
+Implement user authentication and token-based authorization for both web and mobile clients.
+
+Restrict API access based on user roles, departments, and specific resources.
+
+Prevent common API vulnerabilities such as broken authentication, excessive data exposure, and insecure direct object references.
+
+Ensure integration with existing identity management and security controls to maintain compliance.
+
+Challenge:
+The team must design a secure API framework that allows both internal teams and external partners to access services safely, without exposing sensitive endpoints. The architecture should support multiple authentication methods, scalable user management, and protection against common web and API-level threats.
