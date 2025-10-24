@@ -1,0 +1,11 @@
+
+aws apigateway test-invoke-method `
+    --rest-api-id 1kec873xqg `
+    --resource-id $(aws apigateway get-resources --rest-api-id 1kec873xqg --region us-east-1 --query "items[?path=='/hello'].id" --output text) `
+    --http-method GET `
+    --region us-east-1 `
+    --cli-binary-format raw-in-base64-out | Out-File -FilePath output.json
+
+
+
+
